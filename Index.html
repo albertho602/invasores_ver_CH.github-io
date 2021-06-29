@@ -1,0 +1,364 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>PRESENTACION JUEGO CH</title>
+
+	<style>
+		#EjerCH {
+			border: solid 5px rgb(67, 67, 196);
+			background: rgb(0, 102, 128);
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var canvas = document.getElementById("EjerCH");
+			if (canvas && canvas.getContext) {
+				var ctx = canvas.getContext("2d");
+
+				if (ctx)//Degradado
+				{
+					var gradiente = ctx.createLinearGradient(0, 0, 0, canvas.height);
+					gradiente.addColorStop(0.1, "black");
+					gradiente.addColorStop(0.6, "gray");
+					gradiente.addColorStop(1, "white");
+					ctx.fillStyle = gradiente;
+					ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+				}
+				if (ctx)//Agregar Imagen
+				{
+					var imagen = new Image();
+					function procesaImagen() {
+						ctx.drawImage(imagen, 750, 20);
+					}
+					imagen.src = "./imagenes/foto.jpg";
+					imagen.onload = function (e) {
+						procesaImagen();
+					}
+				}
+			}
+			if (ctx)//Dibujar C
+			{
+				//Descripcion de lineas
+				ctx.lineWidth = 10;
+				ctx.strokeStyle = "white";
+				ctx.beginPath();
+				ctx.arc(120, 150, 78, 2.3 * Math.PI, 1.7 * Math.PI);
+				ctx.stroke();
+			}
+			if (ctx)//Dibujar A
+			{
+				//Colores
+				ctx.lineWidth = 10;
+				ctx.strokeStyle = "red";
+				ctx.beginPath();
+				ctx.moveTo(180, 230);
+				//Dibujamos la curva
+				ctx.bezierCurveTo(200, 0, 250, 35, 260, 230);
+				ctx.stroke();
+
+				ctx.beginPath();
+				ctx.lineCap = "round";
+				ctx.moveTo(190, 150);
+				ctx.lineTo(250, 150);
+				ctx.stroke();
+			}
+			if (ctx)//Dibujar R
+			{
+				//Colores
+				ctx.lineWidth = 10;
+				ctx.strokeStyle = "blue";
+				ctx.beginPath();
+				ctx.lineCap = "butt";
+				ctx.moveTo(275, 70);
+				//Dibujamos la curva
+				ctx.bezierCurveTo(450, 95, 170, 150, 345, 226);
+				ctx.stroke();
+
+				ctx.beginPath();
+				ctx.lineCap = "butt";
+				ctx.moveTo(280, 230);
+				ctx.lineTo(280, 70);
+				ctx.stroke();
+
+				if (ctx)//Dibujar L
+				{
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "green";
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(360, 230);
+					ctx.lineTo(360, 70);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(355, 230);
+					ctx.lineTo(410, 230);
+					ctx.stroke();
+				}
+
+				if (ctx)//Dibujar O
+				{
+					//Descripcion de lineas
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "yellow";
+					ctx.beginPath();
+					ctx.arc(480, 150, 78, 50, 0, 2 * Math.PI, true);
+					ctx.stroke();
+				}
+				if (ctx)//Dibujar S
+				{
+					//Colores
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "blue";
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(640, 70);
+					//Dibujamos la curva
+					ctx.bezierCurveTo(450, 160, 760, 130, 570, 230);
+					ctx.stroke();
+
+				}
+				if (ctx)//Dibujar H
+				{
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "black";
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(50, 430);
+					ctx.lineTo(50, 250);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(110, 430);
+					ctx.lineTo(110, 250);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(50, 340);
+					ctx.lineTo(110, 340);
+					ctx.stroke();
+				}
+				if (ctx)//Dibujar E
+				{
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "blue";
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(130, 430);
+					ctx.lineTo(130, 250);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(130, 255);
+					ctx.lineTo(180, 255);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(130, 340);
+					ctx.lineTo(180, 340);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(130, 425);
+					ctx.lineTo(180, 425);
+					ctx.stroke();
+
+				}
+				if (ctx)//Dibujar R
+				{
+					//Colores
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "pink";
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(195, 255);
+					//Dibujamos la curva
+					ctx.bezierCurveTo(350, 280, 110, 300, 250, 430);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(195, 430);
+					ctx.lineTo(195, 250);
+					ctx.stroke();
+
+				}
+				if (ctx)//Dibujar N
+				{
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "white";
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(270, 430);
+					ctx.lineTo(270, 250);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(320, 430);
+					ctx.lineTo(320, 250);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(270, 253);
+					ctx.lineTo(320, 428);
+					ctx.stroke();
+				}
+
+				if (ctx)//Dibujar A
+				{
+					//Colores
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "yellow";
+					ctx.beginPath();
+					ctx.moveTo(390, 430);
+					//Dibujamos la curva
+					ctx.bezierCurveTo(355, 30, 340, 430, 340, 430);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(345, 340);
+					ctx.lineTo(380, 340);
+					ctx.stroke();
+				}
+
+				{
+					ctx.lineWidth = 10; //Dibujar N
+					ctx.strokeStyle = "red";
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(410, 430);
+					ctx.lineTo(410, 250);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(460, 430);
+					ctx.lineTo(460, 250);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(410, 253);
+					ctx.lineTo(460, 428);
+					ctx.stroke();
+				}
+
+				{
+					ctx.lineWidth = 10; //Dibujar D
+					ctx.strokeStyle = "blue";
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(480, 430);
+					ctx.lineTo(480, 250);
+					ctx.stroke();
+
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "blue";
+					ctx.beginPath();
+					ctx.arc(480, 340, 85, 0.5 * Math.PI, 1.5 * Math.PI, true);
+					ctx.stroke();
+
+				}
+				if (ctx)//Dibujar E
+				{
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "white";
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(585, 430);
+					ctx.lineTo(585, 250);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(585, 255);
+					ctx.lineTo(640, 255);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(585, 340);
+					ctx.lineTo(640, 340);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(585, 425);
+					ctx.lineTo(640, 425);
+					ctx.stroke();
+
+				}
+
+				if (ctx)//Dibujar E
+				{
+					ctx.lineWidth = 10;
+					ctx.strokeStyle = "black";
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(655, 255);
+					ctx.lineTo(710, 255);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(655, 425);
+					ctx.lineTo(710, 425);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.lineCap = "butt";
+					ctx.moveTo(705.8, 255);
+					ctx.lineTo(659.5, 425);
+					ctx.stroke();
+
+
+				}
+
+
+
+
+			}
+			else {
+				alert("Error al crear tu contexto");
+			}
+
+
+
+
+		}
+	</script>
+</head>
+
+<body>
+	<h1>
+		<href>
+			<center>PRESENTACION JUEGO </center>
+		</href>
+		<center><a href="juegoCH.html" title="JUGAR">Mi enlace</a></center>
+
+	</h1>
+	<center><canvas id="EjerCH" width="1000px" height="500px"></center>
+
+	</canvas>
+</body>
+
+</html>
